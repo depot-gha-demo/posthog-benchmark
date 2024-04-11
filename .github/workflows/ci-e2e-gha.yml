@@ -21,7 +21,7 @@ jobs:
 
         steps:
             - name: Check out
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Group spec files into chunks of three
               id: chunk
@@ -39,7 +39,7 @@ jobs:
             build-id: ${{ steps.build.outputs.build-id }}
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
             - name: Build the Docker image with Depot
               # Build the container image in preparation for the E2E tests
               uses: ./.github/actions/build-n-cache-image
@@ -67,7 +67,7 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Install pnpm
               uses: pnpm/action-setup@v2
